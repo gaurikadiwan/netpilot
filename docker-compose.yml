@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: netpilot
+      POSTGRES_PASSWORD: netpilot
+      POSTGRES_DB: netpilot
+    ports:
+      - "5432:5432"
+    volumes:
+      - netpilot_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U netpilot"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  netpilot_pg_data:
