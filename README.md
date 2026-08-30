@@ -28,7 +28,7 @@ approval token, and every call is audit-logged.
 - [ ] Milestone 3 — the one gated `apply_remediation` mutating tool + human approval flow
 - [ ] Milestone 4 — CI/CD pipeline, Prometheus metrics, demo
 
-See `ARCHITECTURE.md` (coming in Milestone 2) for the full system design.
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for the full system design.
 
 ## Tech stack
 
